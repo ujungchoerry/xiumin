@@ -1,16 +1,15 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
+const PREFIX = "%"
 
-const token = 'NjAxODgwODg3MzEwNjgwMDcw.XTIveA.tSCHK3NzVkKGgW7a5v0yxuFnkNA';
-
-bot.on('ready', () =>{
-    console.log('This bot is online!');
+client.on('ready', function() {
+    bot.user.setActivity("%help for commands")
+    console.log("Booted up!");
 })
 
-bot.on('message', msg=>{
-    if(msg.content === "hi"){
-        msg.reply('hello~');
-    }
-})
+client.on('message', msg=>{
+    if(message.content.startsWith(PREFIX + "dany")){
+        message.channel.send('my soulmate');
+}});
 
-bot.login(token);
+client.login(Process.env.token);

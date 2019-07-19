@@ -12,10 +12,5 @@ bot.on('message', msg=>{
         msg.reply('hello~');
     }
 })
-bot.on('message', msg=>{
-    if(msg.content === "tako"){
-        msg.reply('dumb bitch');
-    }
-})
 
 bot.login(token);
